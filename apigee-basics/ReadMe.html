@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>ReadMe</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<section id="apigee" class="level2">
+<h2>APIGEE</h2>
+<section id="apigee---what-when-how-and-why-of-things" class="level3">
+<h3>APIGEE - what , when , how and why of things</h3>
+<p>Of course. Let’s break down Apigee using the What, When, How, and Why framework.</p>
+<hr />
+<ol type="1">
+<li>What is Apigee?</li>
+</ol>
+<p>Apigee (now officially Google Cloud Apigee) is a full-featured, multi-cloud API management platform. It provides tools and infrastructure for the entire API lifecycle—from design, development, and security to analytics, monetization, and developer engagement.</p>
+<p>Think of it as the “central nervous system” for your API ecosystem. It sits as a layer between your backend services (the “things that do the work”) and the clients that consume them (apps, websites, partners), managing all the cross-cutting concerns.</p>
+<p>Key Components:</p>
+<p>· API Gateway: The core runtime component that proxies API requests, enforces security, and executes policies. · Developer Portal: A customizable website (often self-service) where developers can discover, learn about, and sign up to use your APIs. · Analytics: Provides deep insights into API performance, usage patterns, error rates, and consumer behavior. · Monetization: Allows you to package APIs into products, set up rate plans, and generate revenue from your API offerings.</p>
+<hr />
+<ol start="2" type="1">
+<li>Why Use Apigee? (The Value Proposition)</li>
+</ol>
+<p>Companies adopt Apigee to solve critical business and technical challenges:</p>
+<p>· Abstraction &amp; Decoupling: Apigee acts as a facade. Your backend services can change, be rewritten, or be replaced without breaking the external contract that your app developers rely on. This protects your consumers from internal changes. · Security: It provides a robust, centralized point to enforce security policies like API key validation, OAuth 2.0 / JWT tokens, threat protection (e.g., XML/JSON bombs, SQL injection), and mutual TLS (mTLS). · Control &amp; Governance: You can enforce usage quotas, rate limits (to prevent abuse and manage traffic spikes), and apply custom logic (like data transformation, mediation between XML/JSON) without touching your backend code. · Analytics &amp; Business Insights: Understand how your APIs are being used. Which ones are most popular? Who are your top consumers? Where are errors occurring? This data is crucial for making informed product decisions. · Monetization: If your business model involves charging for API access, Apigee provides the tools to create rate plans, generate bills, and track revenue. · Developer Ecosystem: The developer portal fosters a community around your APIs, making it easy for internal or external developers to onboard and build applications.</p>
+<hr />
+<ol start="3" type="1">
+<li>How Does Apigee Work? (The Mechanics)</li>
+</ol>
+<p>At its simplest, Apigee works by intercepting API calls, applying policies, and then routing them to the appropriate backend.</p>
+<p>The Basic Flow:</p>
+<ol type="1">
+<li>Publish: An API developer defines an API proxy in Apigee. This proxy is a mapping to one or more backend services (called “targets”).</li>
+<li>Call: A client application (e.g., a mobile app) makes an HTTP request to the Apigee API proxy endpoint (e.g., https://mycompany.apigee.net/v1/orders) instead of calling the backend directly.</li>
+<li>Process (The “Proxy” Part): The API Gateway receives the request and executes a predefined sequence of steps in a “proxy pipeline”: · PreFlow: Policies applied on the request before it is routed to the target. (e.g., Verify API Key, Spike Arrest for rate limiting, JSON Threat Protection). · Target Endpoint: The request is sent to the actual backend service (e.g., a Java microservice, a legacy system). · PostFlow: Policies applied on the response after it comes back from the target but before it is sent to the client. (e.g., XML-to-JSON Transformation, Remove Headers to hide internal info).</li>
+<li>Respond: The transformed and secured response is sent back to the client app.</li>
+<li>Analyze: Apigee logs the entire transaction for analytics and monitoring.</li>
+</ol>
+<p>Example Policy (Snippet): A policy to verify an API key is attached to the preflow. It’s an XML configuration that Apigee understands:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- This is a simplified example --&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">VerifyAPIKey</span><span class="ot"> async=</span><span class="st">&quot;false&quot;</span><span class="ot"> continueOnError=</span><span class="st">&quot;false&quot;</span><span class="ot"> enabled=</span><span class="st">&quot;true&quot;</span><span class="ot"> name=</span><span class="st">&quot;Verify-API-Key&quot;</span>&gt;</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">APIKey</span><span class="ot"> ref=</span><span class="st">&quot;request.queryparam.apikey&quot;</span>/&gt; <span class="co">&lt;!-- Looks for the key in the query string --&gt;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">VerifyAPIKey</span>&gt;</span></code></pre></div>
+<hr />
+<ol start="4" type="1">
+<li>When to Use Apigee? (Ideal Use Cases)</li>
+</ol>
+<p>Apigee is a powerful (and enterprise-grade) platform, so it’s best suited for specific scenarios:</p>
+<p>· Building a Public API Program: When you want to expose your services to external partners or third-party developers to build an ecosystem around your platform (e.g., Twilio, Stripe). · Digital Transformation: When modernizing legacy applications by wrapping them with a modern, well-designed API layer, allowing them to be consumed by new mobile and web apps. · Multi-Channel Strategy: When you have multiple client types (iOS, Android, Web, Smart Devices) that all need to consume the same backend services consistently and securely. · Microservices Governance: In a microservices architecture, Apigee can act as a North-South Gateway (or API Gateway), handling external traffic, security, and composition for a large number of internal microservices. · Monetizing Digital Assets: When you have data or services that other businesses are willing to pay for on a usage-based or subscription model. · Complex Security &amp; Compliance Needs: When you need a centralized, robust system to enforce OAuth, quotas, and threat protection, especially across multiple teams and APIs.</p>
+<p>When Not to Use Apigee?</p>
+<p>· For very simple, internal-only APIs with no need for analytics, security, or versioning. · When the primary need is for East-West traffic (service-to-service communication inside a network). A service mesh (like Istio) is often a better fit for this. · For projects with extremely tight budgets, as Apigee is a premium product with significant licensing costs.</p>
+<hr />
+<section id="summary" class="level4">
+<h4>Summary</h4>
+<p>Aspect Description What A comprehensive API management platform by Google Cloud for the full API lifecycle. Why To secure, control, analyze, and monetize APIs, enabling digital transformation and building developer ecosystems. How By acting as a reverse proxy that intercepts API calls, applies policies (security, mediation), and routes to backends. When Ideal for public API programs, microservices north-south traffic, monetization, and complex enterprise governance.</p>
+</section>
+</section>
+<section id="a-complete-journey-of-publishing-subscribing-and-consuming-an-api-with-the-real-world-springboot-application" class="level3">
+<h3>A complete journey of publishing, subscribing and consuming an API with the real world Springboot application</h3>
+<p>Of course. Here is a complete, real-world journey of publishing, subscribing, and consuming an API using Spring Boot as the backend service and Google Cloud Apigee as the API management layer.</p>
+<p>We’ll use a simple but practical example: a Product API.</p>
+<hr />
+<p>The Cast &amp; Setup</p>
+<ol type="1">
+<li><p>API Provider (Us): A company with a Spring Boot application that has a Product service.</p></li>
+<li><p>API Consumer (A Partner/App Developer): An external developer who wants to use our product data in their mobile app.</p></li>
+<li><p>Spring Boot Application: Our backend service running locally or on a cloud like GCP, AWS, etc. · Endpoint: http://our-spring-app.com/api/v1/products · Controller: ```java <span class="citation" data-cites="RestController">(<strong>RestController?</strong>)</span> <span class="citation" data-cites="RequestMapping">(<strong>RequestMapping?</strong>)</span>(“/api/v1/products”) public class ProductController {</p>
+<pre><code>  @GetMapping
+  public List&lt;Product&gt; getAllProducts() {
+      // ... logic to get products from a database
+      return productService.findAll();
+  }
+
+  @GetMapping(&quot;/{id}&quot;)
+  public Product getProductById(@PathVariable Long id) {
+      // ... logic to get a specific product
+      return productService.findById(id).orElseThrow(() -&gt; new ProductNotFoundException(id));
+  }</code></pre>
+<p>} ```</p></li>
+<li><p>Apigee: The API management platform we will use. We assume an organization is already set up.</p></li>
+</ol>
+<hr />
+<p>Phase 1: Publishing the API in Apigee</p>
+<p>This is what we, the API provider, do to expose our Spring Boot API securely through Apigee.</p>
+<p>Step 1: Create an API Proxy</p>
+<p>We create a proxy in Apigee that will represent our Spring Boot Product API.</p>
+<p>· Action: In the Apigee UI, we go to Develop -&gt; API Proxies -&gt; Create New. · Name: product-service-v1 · Proxy Type: We choose Reverse Proxy. · Target Service: We enter the base URL of our Spring Boot application: http://our-spring-app.com. This is the crucial link; Apigee now knows where to send requests. · Paths: We set the base path for the proxy, e.g., /v1/products.</p>
+<p>Result: Apigee generates a new proxy endpoint like: https://your-org-name-environment.apigee.net/v1/products</p>
+<p>This URL is now the face of our API. Clients will call this, not our Spring Boot URL directly.</p>
+<p>Step 2: Configure Policies (The “Why” of Apigee)</p>
+<p>We add policies to the Proxy to manage traffic, secure access, and transform data. We edit the proxy’s PreFlow in the request pipeline.</p>
+<p>· Policy 1: Verify API Key · Why: To identify the app making the call. This is the simplest form of authentication. · How: We attach an Verify API Key policy. This policy checks for a valid key, usually passed in the x-apikey header. · Policy 2: Spike Arrest · Why: To protect our Spring Boot backend from traffic spikes and denial-of-service attacks. · How: We add a Spike Arrest policy to limit traffic to, say, 10 requests per second.</p>
+<p>What the Proxy Flow Looks Like Now:</p>
+<ol type="1">
+<li>Request comes to https://your-org.apigee.net/v1/products/123</li>
+<li>PreFlow: Apigee executes the Verify API Key and Spike Arrest policies.</li>
+<li>If the key is invalid or the rate limit is breached, Apigee immediately rejects the request and never calls our Spring backend. This is a huge win for security and performance.</li>
+<li>If policies pass, the request is routed to the target: http://our-spring-app.com/api/v1/products/123.</li>
+<li>The Spring application processes the request and returns a response.</li>
+<li>The response flows back through Apigee to the client.</li>
+</ol>
+<p>Step 3: Create an API Product</p>
+<p>An API Product in Apigee is a bundle of API proxies (or specific paths) that we want to sell or offer as a plan.</p>
+<p>· Action: In the Apigee UI, we go to Publish -&gt; API Products -&gt; Create. · Name: ProductCatalog-Basic · Environment: test or prod · Access: We add the product-service-v1 proxy and specify the paths we want to expose (e.g., /v1/products/**). · Quotas: We set a quota, e.g., 1000 requests per day for the basic plan.</p>
+<p>This API Product is the package that developers will subscribe to.</p>
+<p>Step 4: Create a Developer Portal</p>
+<p>We use Apigee’s built-in tools to create a portal (a website) where developers can:</p>
+<p>· Discover our ProductCatalog-Basic API product. · Read the automatically generated documentation for our endpoints. · Sign up to get access.</p>
+<p>We publish the API Product to this portal.</p>
+<hr />
+<p>Phase 2: Subscribing to the API (The Consumer’s Journey)</p>
+<p>This is what our partner, the mobile app developer, does to get access.</p>
+<p>Step 1: Discover and Sign Up</p>
+<ol type="1">
+<li>The developer goes to our Developer Portal URL (e.g., dev.mycompany.com).</li>
+<li>They browse the available APIs and find the ProductCatalog-Basic product.</li>
+<li>They click “Sign Up” or “Register” on the portal, creating a developer account.</li>
+</ol>
+<p>Step 2: Register an App and Get Credentials</p>
+<ol type="1">
+<li>In their developer account, they create a new “App.” They might name it MobileShoppingApp.</li>
+<li>When creating the app, they select which API Products it needs access to (in this case, ProductCatalog-Basic).</li>
+<li>Upon registering the app, the portal automatically generates a unique API Key for that app. This key is the secret token that identifies the MobileShoppingApp.</li>
+</ol>
+<p>The consumer now has their key and is ready to make calls.</p>
+<hr />
+<p>Phase 3: Consuming the API (The Real-World Call)</p>
+<p>Now, let’s see the complete flow from the mobile app to the Spring backend and back.</p>
+<p>Step 1: The Mobile App Makes a Call</p>
+<p>The developer codes their mobile app to call the Apigee endpoint, adding the API key to the header.</p>
+<p>HTTP Request from the Mobile App:</p>
+<pre class="http"><code>GET /v1/products/123 HTTP/1.1
+Host: your-org-test.apigee.net
+x-apikey: A12ZYX3B4C5D6E7F8G9H0 // The API Key for &#39;MobileShoppingApp&#39;
+User-Agent: MobileShoppingApp/1.0</code></pre>
+<p>Step 2: Apigee Processes the Request</p>
+<ol type="1">
+<li>Receive: Apigee receives the request at its gateway.</li>
+<li>Verify: The Verify API Key policy springs into action. It takes the key A12ZYX3B4C5D6E7F8G9H0 and checks: · Is this a valid key issued by Apigee? Yes. · Is the key associated with an approved app that is subscribed to the ProductCatalog-Basic product? Yes. · Has the app’s daily quota of 1000 requests been exceeded? No.</li>
+<li>Route: All checks pass. Apigee strips the x-apikey header (so it never reaches your backend) and transforms the URL. The request is now sent to the pre-configured target: · Original URL: https://your-org.apigee.net/v1/products/123 · Transformed Target URL: http://our-spring-app.com/api/v1/products/123</li>
+</ol>
+<p>Step 3: The Spring Backend Responds</p>
+<p>Our Spring Boot application receives what looks like a normal HTTP request. It is completely unaware of Apigee. It processes the request, queries the database for product ID 123, and returns a JSON response.</p>
+<p>HTTP Response from Spring Boot:</p>
+<pre class="http"><code>HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  &quot;id&quot;: 123,
+  &quot;name&quot;: &quot;Wireless Headphones&quot;,
+  &quot;price&quot;: 99.99,
+  &quot;inStock&quot;: true
+}</code></pre>
+<p>Step 4: Apigee Processes the Response</p>
+<p>The response flows back through Apigee. We could add policies here (e.g., to filter out the price field for certain plans), but in this case, it just logs the transaction for analytics and sends the response back.</p>
+<p>Step 5: The Mobile App Receives the Data</p>
+<p>The mobile app gets the clean JSON response and displays the product information to the user. The journey is complete.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;id&quot;</span><span class="fu">:</span> <span class="dv">123</span><span class="fu">,</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;name&quot;</span><span class="fu">:</span> <span class="st">&quot;Wireless Headphones&quot;</span><span class="fu">,</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;price&quot;</span><span class="fu">:</span> <span class="fl">99.99</span><span class="fu">,</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;inStock&quot;</span><span class="fu">:</span> <span class="kw">true</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
+<hr />
+<p>Summary of the End-to-End Flow</p>
+<p>Step Actor Action Technology 1. Publish Us (Provider) Create Proxy, Policies, and Product in Apigee. Apigee UI/API 2. Expose Us (Provider) Document the API on the Developer Portal. Apigee Portal 3. Discover Consumer Finds our API Product on the portal. Portal Website 4. Subscribe Consumer Registers an App to get an API Key. Portal Website 5. Call Consumer’s App Sends request to Apigee URL with API Key. Mobile App Code 6. Protect Apigee Verifies Key, Checks Quota &amp; Rate Limits. Apigee Policies 7. Route Apigee Forwards valid request to Spring Boot backend. Apigee Proxy 8. Process Spring Boot Handles the business logic and returns data. <span class="citation" data-cites="RestController">(<strong>RestController?</strong>)</span> 9. Analyze Apigee Logs the transaction for monitoring. Apigee Analytics 10. Consume Consumer’s App Receives data and uses it. Mobile App UI</p>
+<p>This seamless integration allows the Spring Boot team to focus on business logic (building great product services) while the API team (or platform team) uses Apigee to handle global concerns like security, governance, and analytics.</p>
+</section>
+<section id="a-visual-illustration-using-an-ascii-diagram-andor-a-plantuml-that-will-add-more-clarity-and-better-insights-into-the-e2e-flow" class="level3">
+<h3>A visual illustration using an ASCII diagram and/or a PlantUML that will add more clarity and better insights into the E2E flow</h3>
+<p>Of course. Here is a visual illustration of the complete end-to-end flow using a combination of ASCII and PlantUML diagrams.</p>
+<p>The journey is broken down into two key diagrams:</p>
+<ol type="1">
+<li>Architectural Overview (ASCII): A static map of all components.</li>
+<li>Sequence Diagram (PlantUML): A dynamic view of the API call flow.</li>
+</ol>
+<hr />
+<ol type="1">
+<li>Architectural Overview (ASCII Diagram)</li>
+</ol>
+<p>This diagram shows the “cast of characters” and how they are connected before any call is made.</p>
+<pre><code>+-----------------------------------------------------------------------+
+|                        API PROVIDER (Our Company)                     |
+|                                                                       |
+|  +---------------------+          +-------------------------------+   |
+|  |   Spring Boot       |          |        Google Cloud Apigee    |   |
+|  |   Backend Service   |&lt;---------|                               |   |
+|  |                     |  Target  |  +-------------------------+  |   |
+|  | - Business Logic    |  Call    |  |      API Proxy          |  |   |       +-----------------------+
+|  | - Database          |          |  |  - product-service-v1   |  |   |       |                       |
+|  | - /api/v1/products  |          |  |  - Policies:            |  |   |       |  API CONSUMER         |
+|  +---------------------+          |  |    * Verify API Key     |  |   |       |  (Mobile App Dev)     |
+|                                   |  |    * Spike Arrest       |  |   |       |                       |
+|  &quot;The Source of Truth&quot;            |  +-------------------------+  |   |       |  +-----------------+  |
+|                                   |                               |   |       |  |  Developer      |  |
+|                                   |  +-------------------------+  |   |       |  |  Portal         |  |
+|                                   |  |     API Product         |  |   |       |  |  - Discover API |  |
+|                                   |  |  - ProductCatalog-Basic |  |   |&lt;------|  |  - Register App |  |
+|                                   |  |  - Quota: 1000/day      |  |   |       |  |  - Get API Key  |  |
+|                                   |  +-------------------------+  |   |       |  +-----------------+  |
+|                                   |                               |   |       |                       |
+|                                   +-------------------------------+   |       |  &quot;Gets Credentials&quot;   |
+|                                                                       |       +-----------------------+
++-----------------------------------------------------------------------+
+
+                               ^
+                               |  API Call (with API Key)
+                               |
++-----------------------+      |
+|                       |      |
+|  API CONSUMER         |------+
+|  (Mobile App)         |         https://my-company.apigee.net/v1/products/123
+|                       |         Header: x-apikey: A12ZYX3B4C5D6E7F8G9H0
+|  - Makes API Call     |
+|  - Uses API Key       |
+|  - Processes Data     |
+|                       |
++-----------------------+
+            |
+            |  (Displays Info)
+            v
+      +-------------+
+      |   End-User  |
+      |   (Customer)|
+      +-------------+</code></pre>
+<hr />
+<ol start="2" type="1">
+<li>Dynamic API Call Flow (PlantUML Sequence Diagram)</li>
+</ol>
+<p>This diagram details the exact sequence of events when the mobile app makes a call. This is the most important part for understanding the “how”.</p>
+<p>PlantUML Code (You can render this at planttext.com):</p>
+<pre class="plantuml"><code>@startuml
+!pragma teoz true
+
+actor &quot;End User&quot; as User
+participant &quot;Mobile App&quot; as App
+participant &quot;Apigee Edge\nGateway&quot; as Apigee
+participant &quot;API Product &amp;\nPolicies&quot; as Policies #LightBlue
+participant &quot;Spring Boot\nBackend&quot; as Spring
+database &quot;Database&quot; as DB
+
+== Phase 3: Consumption - The API Call ==
+
+App -&gt; User: User requests to view product 123
+
+== 1. App calls the API Proxy Endpoint ==
+App -&gt; Apigee: GET /v1/products/123\nHeader: x-apikey: &lt;API_KEY&gt;
+
+== 2. Apigee executes Policies ==
+group Apigee [PreFlow Request]
+    Apigee -&gt; Policies: **Verify API Key**
+    Policies --&gt; Apigee: ✅ Key Valid &amp; Quota OK
+    Apigee -&gt; Policies: **Spike Arrest (10ps)**
+    Policies --&gt; Apigee: ✅ Rate Limit OK
+end
+
+Note right of Apigee: Request is rejected here if policies fail. The backend is never touched.
+
+== 3. Request is routed to Target (Spring Boot) ==
+Apigee -&gt; Spring: GET /api/v1/products/123\n(API Key header is stripped)
+
+== 4. Spring handles the business logic ==
+Spring -&gt; DB: SQL Query: find product by id
+DB --&gt; Spring: Product data
+Spring -&gt; Spring: Serialize to JSON
+Spring --&gt; Apigee: HTTP 200 + JSON Response
+
+== 5. Response flows back through Apigee ==
+group Apigee [PostFlow Response] #LightGreen
+    Apigee -&gt; Policies: **Log for Analytics**
+    Note right of Policies: Usage, Latency, Errors are recorded
+end
+
+== 6. App receives the final response ==
+Apigee --&gt; App: HTTP 200 + JSON Response
+
+== 7. App uses the data ==
+App -&gt; App: Parse JSON, Update UI
+App -&gt; User: Displays product info
+
+@enduml</code></pre>
+<p>Rendered Visual Flow (Description of the PlantUML Diagram):</p>
+<p>The sequence diagram visually shows the following critical insights:</p>
+<ol type="1">
+<li>The Consumer is Decoupled: The Mobile App only knows about the Apigee endpoint, not the internal Spring Boot URL.</li>
+<li>Policies are Enforced Early: Security (API Key Verification) and Protection (Spike Arrest) happen before the request ever reaches your precious Spring Boot backend. This is the primary value of the API Gateway.</li>
+<li>Backend is Unaware: The Spring Boot application receives a clean, standard HTTP request. It has no knowledge of API keys, quotas, or Apigee. It just does its job.</li>
+<li>Analytics are Automatic: The response is logged on its way back out, providing immediate visibility into API usage and performance without any extra code in your Spring app.</li>
+<li>The End-User Experience: The entire complex journey is completed in milliseconds, resulting in a seamless experience for the end-user.</li>
+</ol>
+<p>This combination of architecture map and sequence flow provides a complete picture of the “what”, “how”, and “why” of the API journey with Spring Boot and Apigee.</p>
+<p>Of course. Here is a visual illustration of the complete end-to-end flow using a combination of ASCII and PlantUML diagrams.</p>
+<p>The journey is broken down into two key diagrams:</p>
+<ol type="1">
+<li>Architectural Overview (ASCII): A static map of all components.</li>
+<li>Sequence Diagram (PlantUML): A dynamic view of the API call flow.</li>
+</ol>
+<hr />
+<ol type="1">
+<li>Architectural Overview (ASCII Diagram)</li>
+</ol>
+<p>This diagram shows the “cast of characters” and how they are connected before any call is made.</p>
+<pre><code>+-----------------------------------------------------------------------+
+|                        API PROVIDER (Our Company)                     |
+|                                                                       |
+|  +---------------------+          +-------------------------------+   |
+|  |   Spring Boot       |          |        Google Cloud Apigee    |   |
+|  |   Backend Service   |&lt;---------|                               |   |
+|  |                     |  Target  |  +-------------------------+  |   |
+|  | - Business Logic    |  Call    |  |      API Proxy          |  |   |       +-----------------------+
+|  | - Database          |          |  |  - product-service-v1   |  |   |       |                       |
+|  | - /api/v1/products  |          |  |  - Policies:            |  |   |       |  API CONSUMER         |
+|  +---------------------+          |  |    * Verify API Key     |  |   |       |  (Mobile App Dev)     |
+|                                   |  |    * Spike Arrest       |  |   |       |                       |
+|  &quot;The Source of Truth&quot;            |  +-------------------------+  |   |       |  +-----------------+  |
+|                                   |                               |   |       |  |  Developer      |  |
+|                                   |  +-------------------------+  |   |       |  |  Portal         |  |
+|                                   |  |     API Product         |  |   |       |  |  - Discover API |  |
+|                                   |  |  - ProductCatalog-Basic |  |   |&lt;------|  |  - Register App |  |
+|                                   |  |  - Quota: 1000/day      |  |   |       |  |  - Get API Key  |  |
+|                                   |  +-------------------------+  |   |       |  +-----------------+  |
+|                                   |                               |   |       |                       |
+|                                   +-------------------------------+   |       |  &quot;Gets Credentials&quot;   |
+|                                                                       |       +-----------------------+
++-----------------------------------------------------------------------+
+
+                               ^
+                               |  API Call (with API Key)
+                               |
++-----------------------+      |
+|                       |      |
+|  API CONSUMER         |------+
+|  (Mobile App)         |         https://my-company.apigee.net/v1/products/123
+|                       |         Header: x-apikey: A12ZYX3B4C5D6E7F8G9H0
+|  - Makes API Call     |
+|  - Uses API Key       |
+|  - Processes Data     |
+|                       |
++-----------------------+
+            |
+            |  (Displays Info)
+            v
+      +-------------+
+      |   End-User  |
+      |   (Customer)|
+      +-------------+</code></pre>
+<hr />
+<ol start="2" type="1">
+<li>Dynamic API Call Flow (PlantUML Sequence Diagram)</li>
+</ol>
+<p>This diagram details the exact sequence of events when the mobile app makes a call. This is the most important part for understanding the “how”.</p>
+<p>PlantUML Code (You can render this at planttext.com):</p>
+<pre class="plantuml"><code>@startuml
+!pragma teoz true
+
+actor &quot;End User&quot; as User
+participant &quot;Mobile App&quot; as App
+participant &quot;Apigee Edge\nGateway&quot; as Apigee
+participant &quot;API Product &amp;\nPolicies&quot; as Policies #LightBlue
+participant &quot;Spring Boot\nBackend&quot; as Spring
+database &quot;Database&quot; as DB
+
+== Phase 3: Consumption - The API Call ==
+
+App -&gt; User: User requests to view product 123
+
+== 1. App calls the API Proxy Endpoint ==
+App -&gt; Apigee: GET /v1/products/123\nHeader: x-apikey: &lt;API_KEY&gt;
+
+== 2. Apigee executes Policies ==
+group Apigee [PreFlow Request]
+    Apigee -&gt; Policies: **Verify API Key**
+    Policies --&gt; Apigee: ✅ Key Valid &amp; Quota OK
+    Apigee -&gt; Policies: **Spike Arrest (10ps)**
+    Policies --&gt; Apigee: ✅ Rate Limit OK
+end
+
+Note right of Apigee: Request is rejected here if policies fail. The backend is never touched.
+
+== 3. Request is routed to Target (Spring Boot) ==
+Apigee -&gt; Spring: GET /api/v1/products/123\n(API Key header is stripped)
+
+== 4. Spring handles the business logic ==
+Spring -&gt; DB: SQL Query: find product by id
+DB --&gt; Spring: Product data
+Spring -&gt; Spring: Serialize to JSON
+Spring --&gt; Apigee: HTTP 200 + JSON Response
+
+== 5. Response flows back through Apigee ==
+group Apigee [PostFlow Response] #LightGreen
+    Apigee -&gt; Policies: **Log for Analytics**
+    Note right of Policies: Usage, Latency, Errors are recorded
+end
+
+== 6. App receives the final response ==
+Apigee --&gt; App: HTTP 200 + JSON Response
+
+== 7. App uses the data ==
+App -&gt; App: Parse JSON, Update UI
+App -&gt; User: Displays product info
+
+@enduml</code></pre>
+<p>Rendered Visual Flow (Description of the PlantUML Diagram):</p>
+<p>The sequence diagram visually shows the following critical insights:</p>
+<ol type="1">
+<li>The Consumer is Decoupled: The Mobile App only knows about the Apigee endpoint, not the internal Spring Boot URL.</li>
+<li>Policies are Enforced Early: Security (API Key Verification) and Protection (Spike Arrest) happen before the request ever reaches your precious Spring Boot backend. This is the primary value of the API Gateway.</li>
+<li>Backend is Unaware: The Spring Boot application receives a clean, standard HTTP request. It has no knowledge of API keys, quotas, or Apigee. It just does its job.</li>
+<li>Analytics are Automatic: The response is logged on its way back out, providing immediate visibility into API usage and performance without any extra code in your Spring app.</li>
+<li>The End-User Experience: The entire complex journey is completed in milliseconds, resulting in a seamless experience for the end-user.</li>
+</ol>
+<p>This combination of architecture map and sequence flow provides a complete picture of the “what”, “how”, and “why” of the API journey with Spring Boot and Apigee.</p>
+</section>
+<section id="explanation-on-proxies-and-authentication" class="level3">
+<h3>Explanation on Proxies , and authentication</h3>
+<p>Of course. Let’s break down the core concepts of Proxies and Authentication in the context of API management (like Apigee), moving from simple analogies to technical specifics.</p>
+<hr />
+<ol type="1">
+<li>Proxies: The Strategic Middleman</li>
+</ol>
+<p>What is a Proxy? (The Simple Analogy)</p>
+<p>Imagine you’re a famous author. Fans want to send you letters, but you don’t want to give out your home address. Instead, you rent a P.O. Box at the local post office.</p>
+<p>· You are the backend service (the real, private address). · The P.O. Box is the API proxy (the public, safe address). · The Post Office is the API gateway (Apigee).</p>
+<p>The post office (gateway) receives all mail for the P.O. Box (proxy), checks it for hazards (security policies), and then forwards the safe letters to your home address (the backend).</p>
+<p>Technical Definition &amp; Why It’s Powerful</p>
+<p>In API management, a proxy is an intermediary software component that sits between a client (e.g., a mobile app) and a backend service (e.g., your Spring Boot app). It acts as a facade, representing one or more backend services.</p>
+<p>The “Why”: The Key Benefits of Using a Proxy</p>
+<p>Benefit Analogy Technical Implementation Abstraction &amp; Decoupling You can move to a new house without telling your fans; you just update your forwarding address at the post office. The client only knows the proxy’s URL. You can completely rewrite your backend, change its programming language, or move it to a new server without breaking the client. Security The post office screens packages for bombs, anthrax, or junk mail before you ever see them. The proxy enforces security policies (API keys, OAuth tokens, threat scanning for SQL injection) before the request hits your vulnerable backend. Traffic Control The post office can limit how many letters you receive per day to prevent you from being overwhelmed. The proxy enforces rate limiting, quotas, and spike arrest to protect your backend from being flooded by too many requests (either accidental or malicious). Mediation &amp; Transformation The post office could translate a letter from French to English before delivering it to you. The proxy can transform message formats (e.g., XML to JSON), add/remove headers, or even combine calls to multiple backends into a single response for the client. Monitoring &amp; Analytics The post office keeps logs of all mail sent and received. The proxy automatically logs every API call, providing crucial data on who is calling what, how often, how fast it responds, and how often it fails.</p>
+<p>In the Apigee Context: When you create an “API Proxy,” you are essentially creating this P.O. Box. You configure:</p>
+<p>· Proxy Endpoint: The public URL that clients call (e.g., https://mycompany.apigee.net/v1/products). · Target Endpoint: The private, internal URL of your backend service (e.g., http://my-spring-app.internal.com/api/products).</p>
+<hr />
+<ol start="2" type="1">
+<li>Authentication: Proving Your Identity</li>
+</ol>
+<p>What is Authentication? (The Simple Analogy)</p>
+<p>Authentication is the process of proving you are who you say you are. It’s like:</p>
+<p>· Showing your ID to a bouncer at a club. · Using a key to unlock your front door. · Entering a password to log into your email.</p>
+<p>In the API world, it’s about proving that an application (a client) has the right to access a specific API.</p>
+<p>Technical Mechanisms in API Proxies</p>
+<p>APIs use standardized methods to handle authentication. The proxy is the “bouncer” that enforces these methods.</p>
+<ol type="1">
+<li>API Keys (The Name Tag)</li>
+</ol>
+<p>· What it is: A long, cryptographically random string (e.g., A12ZYX3B4C5D6E7F8G9H0) that is issued to a specific application. · How it works: The client sends the key in the HTTP request, usually in a header like x-apikey. · Proxy’s Job: Apigee checks if the key is valid, not revoked, and associated with an app that has access to the requested API product. · Analogy: A pre-shared secret handshake or a concert wristband. It’s simple but not super secure if intercepted. · Use Case: Identifying an application for basic access control and analytics. Best for low-risk scenarios or as one part of a larger security strategy.</p>
+<ol start="2" type="1">
+<li>OAuth 2.0 / Access Tokens (The Temporary Keycard)</li>
+</ol>
+<p>· What it is: A framework for issuing short-lived access tokens instead of static keys. · How it works: 1. The application (client) redirects a user to a login page (managed by Apigee or an identity provider like Google). 2. The user enters their credentials (username/password). 3. If successful, the application receives a short-lived access token (a JWT - JSON Web Token). 4. The client sends this token in the Authorization: Bearer <token> header. · Proxy’s Job: Apigee validates the JWT: Is it signed correctly? Is it expired? What scopes (permissions) does it contain? · Analogy: A temporary keycard for a hotel room. It works for a set period and only for the room you were assigned. It’s much safer than a static key. · Use Case: Authorizing users and applications for specific actions. Essential for accessing user-specific data and for higher-security applications. This is the modern standard.</p>
+<ol start="3" type="1">
+<li>Mutual TLS (mTLS) (The Digital Passport)</li>
+</ol>
+<p>· What it is: A two-way SSL handshake where both the client and the server (proxy) prove their identity using digital certificates. · How it works: The client presents its certificate to the proxy, and the proxy verifies it against a trusted list. The proxy also presents its certificate to the client. · Proxy’s Job: Apigee performs the cryptographic handshake and validation, ensuring the client is a known, trusted entity. · Analogy: Not just checking someone’s ID, but also having them provide a government-verified passport that’s extremely hard to forge. This is high-trust, machine-to-machine (M2M) authentication. · Use Case: Securing highly sensitive communications between known backend systems (e.g., microservices) or with trusted partners.</p>
+<p>How They Work Together in Apigee: A Summary</p>
+<p>The following PlantUML sequence diagram shows how a proxy handles different authentication methods, which is its primary job as a gatekeeper.</p>
+<p>View this diagram at planttext.com:</p>
+<pre class="plantuml"><code>@startuml
+title API Proxy: The Authentication Gatekeeper
+
+actor &quot;Client App&quot; as Client
+participant &quot;Apigee Proxy&quot; as Apigee
+database &quot;Validation\nRegistry&quot; as Registry
+
+== Scenario 1: API Key Authentication ==
+
+Client -&gt; Apigee: GET /api/resource\nx-apikey: ABC123XYZ
+Apigee -&gt; Registry: Validate API Key &quot;ABC123XYZ&quot;
+Registry --&gt; Apigee: ✅ Valid, App: Mobile-App-01
+Apigee -&gt; Apigee: Check Quota &amp; Rate Limits
+Apigee --&gt; Client: ✅ 200 OK (Access Granted)
+
+--
+
+== Scenario 2: OAuth 2.0 (JWT) Authentication ==
+
+Client -&gt; Apigee: GET /api/resource\nAuthorization: Bearer &lt;JWT_Token&gt;
+Apigee -&gt; Apigee: **Decode &amp; Verify JWT**\n- Signature? ✅\n- Expired? ❌\n- Scope? read_data ✅
+Apigee --&gt; Client: ✅ 200 OK (Access Granted)
+
+--
+
+== Scenario 3: Failed Authentication ==
+
+Client -&gt; Apigee: GET /api/resource\nx-apikey: INVALID_KEY
+Apigee -&gt; Registry: Validate API Key &quot;INVALID_KEY&quot;
+Registry --&gt; Apigee: ❌ Key Not Found
+Apigee --&gt; Client: 🚫 **401 Unauthorized**
+
+@enduml</code></pre>
+<p>Key Takeaway: The proxy is the strategic choke point where authentication (and authorization) is enforced. It centralizes security logic, protecting your backend services from having to implement these complex and critical checks themselves. This makes your system more secure, manageable, and scalable.</p>
+</section>
+</section>
+</body>
+</html>
